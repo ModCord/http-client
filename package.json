@@ -1,5 +1,5 @@
 {
-  "name": "mc-http-clent",
+  "name": "hclientify",
   "version": "1.0.0",
   "description": "A lightweight layer of abstraction over the native http client.",
   "main": "index.js",
