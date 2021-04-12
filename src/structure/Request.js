@@ -110,6 +110,17 @@ class Request {
   }
 
   /**
+   * Sets the method.
+   * 
+   * @param {number} method The maximum size for the http request response.
+   * @returns {Request} An instance of itself.
+   */
+  setMethod (method) {
+    this.method = method;
+    return this;
+  }
+
+  /**
    * Set up the maximum size for this http request.
    * 
    * @param {number} size The maximum size for the http request response.
