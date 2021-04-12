@@ -5,7 +5,7 @@ A single example to get your started.
 
 **The following code is not quite valid javascript, it's only made to showcase the constructor features and response values, however it is close.**
 ```js
-const { Request } = require("mc-http-request");
+const { Request } = require("hclientify");
 const httpRequest = new Request("https://example.com/api", "get") // You can set up an url which you can navigate later, and specify the method, to modify it later you can use setMethod, defaults to get. 
   .setMethod("post")
   .path("/users/list") // This will make url become https://example.com/api/users/list, you can also use dots to modify the path like you would in a file.
