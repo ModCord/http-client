@@ -1,0 +1,36 @@
+{
+  "name": "mc-http-clent",
+  "version": "1.0.0",
+  "description": "A lightweight layer of abstraction over the native http client.",
+  "main": "index.js",
+  "scripts": {
+    "set-test": "npm install --dev",
+    "lint": "eslint src",
+    "test": "jest --config jest.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ModCord/http-client.git"
+  },
+  "keywords": [
+    "http",
+    "client",
+    "web",
+    "http",
+    "http-client",
+    "request",
+    "http-request"
+  ],
+  "author": "MrAugu#7917 <mraugu@yahoo.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ModCord/http-client/issues"
+  },
+  "homepage": "https://github.com/ModCord/http-client#readme",
+  "devDependencies": {
+    "eslint": "^7.24.0",
+    "eslint-plugin-jsdoc": "^32.3.0",
+    "jest": "^26.6.3",
+    "js-test": "0.0.1"
+  }
+}
