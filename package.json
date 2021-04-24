@@ -2,7 +2,7 @@
   "name": "hclientify",
   "version": "1.0.0",
   "description": "A lightweight layer of abstraction over the native http client.",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "set-test": "npm install --dev",
     "lint": "eslint src",
