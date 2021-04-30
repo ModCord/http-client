@@ -42,9 +42,9 @@ test("set timeout", () => {
 
 test("set max buffer size", () => {
   const request = new Request("https://jsonplaceholder.typicode.com/information/api")
-    .setMaxBufferSize(200);
+    .maxBufferSize(200);
 
-  expect(request.maxBufferSize).toBe(200);
+  expect(request.requestMaxBufferSize).toBe(200);
 });
 
 test("set accept stream", () => {
@@ -178,7 +178,7 @@ test("send a get succesful request", async () => {
 
 test("send a get request with too large response", async () => {
   const response = await (new Request("https://jsonplaceholder.typicode.com/")
-    .setMaxBufferSize(200)
+    .maxBufferSize(200)
     .send()).catch(()=>{});
 
   expect(response).toBeUndefined();
