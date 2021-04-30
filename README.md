@@ -7,7 +7,7 @@ A single example to get your started.
 ```js
 const { Request } = require("hclientify");
 const httpRequest = new Request("https://example.com/api", "get") // You can set up an url which you can navigate later, and specify the method, to modify it later you can use setMethod, defaults to get. 
-  .setMethod("post")
+  .method("post")
   .path("/users/list") // This will make url become https://example.com/api/users/list, you can also use dots to modify the path like you would in a file.
   .header({
     "Content-Type": "application/json",
@@ -20,7 +20,7 @@ const httpRequest = new Request("https://example.com/api", "get") // You can set
   }) // Sets multiple dummie query.
   .query("show-names", false) // Set up a single query param.
   .stream(false) // Does not return a response stream.
-  .setMaxBufferSize(6000) // Sets the maximum response body size in bytes.
+  .maxBufferSize(6000) // Sets the maximum response body size in bytes.
   .timeout(30000) // Will wait 30 seconds before closing connection.
   .compression(true) // Accept compressed responses
   .body({
