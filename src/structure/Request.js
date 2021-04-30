@@ -71,7 +71,7 @@ class Request {
      * 
      * @type {number}
      */
-    this.maxBufferSize = null;
+    this.requestMaxBufferSize = null;
 
     /**
      * The maximum amount of time in which the http client will await a response, idefinetely by default.
@@ -127,7 +127,7 @@ class Request {
    * @returns {Request} An instance of itself.
    */
   maxBufferSize (size) {
-    this.maxBufferSize = size;
+    this.requestMaxBufferSize = size;
     return this;
   }
 
@@ -269,7 +269,7 @@ class Request {
       responseStream.on("data", (chunk) => {
         responseStructure.appendChunk(chunk);
         
-        if (this.maxBufferSize && responseStructure.body.length > this.maxBufferSize) {
+        if (this.requestMaxBufferSize && responseStructure.body.length > this.requestMaxBufferSize) {
           responseStream.destroy();
           reject(`Received a response which was longer than acceptable maximum buffer size which is ${this.maxBufferSize} bytes.`);
         }
