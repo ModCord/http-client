@@ -115,7 +115,7 @@ class Request {
    * @param {number} method The maximum size for the http request response.
    * @returns {Request} An instance of itself.
    */
-  setMethod (method) {
+  method (method) {
     this.method = method;
     return this;
   }
@@ -126,7 +126,7 @@ class Request {
    * @param {number} size The maximum size for the http request response.
    * @returns {Request} An instance of itself.
    */
-  setMaxBufferSize (size) {
+  maxBufferSize (size) {
     this.maxBufferSize = size;
     return this;
   }
