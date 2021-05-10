@@ -29,7 +29,7 @@ class Request {
      * 
      * @type {string}
      */
-    this.method = method;
+    this.requestMethod = method;
 
     /**
      * The headers sent with the request, none by default.
@@ -116,7 +116,7 @@ class Request {
    * @returns {Request} An instance of itself.
    */
   method (method) {
-    this.method = method;
+    this.requestMethod = method;
     return this;
   }
 
@@ -219,7 +219,7 @@ class Request {
         "host": this.url.hostname,
         "port": this.url.port,
         "path": this.url.pathname + (this.url.search === null ? "" : this.url.search),
-        "method": this.method,
+        "method": this.requestMethod,
         "headers": this.headers
       };
 
