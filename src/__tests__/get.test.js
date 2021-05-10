@@ -9,7 +9,7 @@ test("create a new request", () => {
 
 test("method assigned correctly", () => {
   const request = new Request("https://jsonplaceholder.typicode.com");
-  expect(request.method).toBe("get");
+  expect(request.requestMethod).toBe("get");
 });
 
 test("set accept compression", () => {
